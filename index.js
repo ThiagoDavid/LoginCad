@@ -7,7 +7,7 @@ var path = require('path');
 const app = express();
 
 var login = "admin";
-var password = "123456";
+var password = "12345";
 
 
 // utilise acesso
@@ -33,12 +33,13 @@ app.post('/', (req, res)=>{
 
 
 //rota get
-app.get('/', (req, res)=>{
+app.get('/', (req, res)=>{/*
     if(req.session.login){
         res.render('logado',{login: login});
     } else {
         res.render('index');
-    }
+    }*/
+    res.render('index');
 })
 
 
